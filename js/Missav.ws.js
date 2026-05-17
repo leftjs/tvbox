@@ -11,7 +11,7 @@ var rule = {
     timeout:15000,
     limit:1,
     play_parse:true,
-    lazy:'js:try{var h=request(input);var u=h.match(/[|]([a-f0-9]+)[|]([a-f0-9]+)[|]([a-f0-9]+)[|]([a-f0-9]+)[|]([a-f0-9]+)[|]com[|]surrit/);if(u){input="https://surrit.com/"+u[5]+"-"+u[4]+"-"+u[3]+"-"+u[2]+"-"+u[1]+"/playlist.m3u8";}else{var a=h.match(/https?:[^"\\s>]+.m3u8[^"\\s>]*/);if(a){input=a[0];}}}catch(e){}',
+    lazy:'js:try{var h=request(input);var i=h.indexOf("surrit");if(i>-1){var s=h.substring(i-200,i);var u=s.match(/[|]([a-f0-9]+)[|]([a-f0-9]+)[|]([a-f0-9]+)[|]([a-f0-9]+)[|]([a-f0-9]+)$/);if(u){input="https://surrit.com/"+u[5]+"-"+u[4]+"-"+u[3]+"-"+u[2]+"-"+u[1]+"/playlist.m3u8";}}}catch(e){}',
     一级:'.thumbnail.group;img&&alt;img&&data-src;span.absolute.bottom-1.right-1&&Text;a&&href',
     二级:'*',
     searchable:0,
