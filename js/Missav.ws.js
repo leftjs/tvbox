@@ -2,7 +2,7 @@ var rule = {
     title:'Missav.ws',
     host:'https://missav.ws',
     // 今日热门/本周热门/本月热门
-    url:'/dmfyclass/fypage',
+    url:'/dmfyclass?page=fypage',
     class_name:'今日热门&本周热门&本月热门',
     class_url:'292/today-hot&169/weekly-hot&263/monthly-hot',
     headers:{
